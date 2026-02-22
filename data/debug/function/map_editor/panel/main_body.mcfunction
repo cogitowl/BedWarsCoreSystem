@@ -19,9 +19,6 @@ tellraw @s ["          当前页面的操作将",{"text":"实时","bold": true},
 tellraw @s ["          这意味着这里的",{"text":"所有"},"操作都是",{"text":"不可逆转的","bold":true}]
 tellraw @s ["          并且会",{"text":"立刻影响","bold": true},"地图的自动恢复,玩家游玩"]
 tellraw @s ["          请在操作前 ",{"text":"再三确认","bold": true},", ",{"text":"点我备份","click_event": {"action": "suggest_command","command": "!!pb make 地图修改前备份"},"underlined": true}]
-tellraw @s ""
-tellraw @s ["          完成的项目会标记为绿色"]
-tellraw @s ["          必须要完成但是没有完成的项目标记为红色"]
 tellraw @s ["          如果需要覆写, 请先使用 Shift + 左键 清除数据"]
 tellraw @s ""
 tellraw @s ["     信息  >>"]
@@ -93,7 +90,7 @@ kill @e[type=marker,tag=debug10]
 kill @e[type=marker,tag=debug11]
 
 ## 结构
-$execute if data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[指令区域 无法定位中心点]","color":"red"},Tags:["debug1"]}
+$execute unless data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[指令区域 无法定位中心点]","color":"red"},Tags:["debug1"]}
 $execute unless entity @e[type=marker,tag=debug1] unless data storage bw:map maps[{"id":$(id)d}].command_area_name run summon marker ~ ~ ~ {CustomName:{"text":"[指令区域 初始化]","color":"white"},Tags:["debug1"]}
 $execute unless entity @e[type=marker,tag=debug1] if data storage bw:map maps[{"id":$(id)d}].command_area_name run summon marker ~ ~ ~ {CustomName:{"text":"[指令区域 传送]","color":"white"},Tags:["debug1"]}
 
@@ -101,8 +98,8 @@ $execute unless entity @e[type=marker,tag=debug1] if data storage bw:map maps[{"
 # execute if score $system_f3 debug matches 1 run summon marker ~ ~ ~ {CustomName:{"text":"[合作平台 传送]","color":"gray"},Tags:["debug2"]}
 # execute if score $system_f3 debug matches 2 run summon marker ~ ~ ~ {CustomName:{"text":"[合作平台 禁用]","color":"gray"},Tags:["debug2"]}
 
-tellraw @s ["     结构  >>   ", \
-    {"selector":"@e[type=marker,tag=debug1]","click_event":{"action":"run_command","command":"/say hello world"},"hover_event": {"action": "show_text","value": "初始化/传送 指令区域"}}]
+$tellraw @s ["     结构  >>   ", \
+    {"selector":"@e[type=marker,tag=debug1]","click_event":{"action":"run_command","command":"/function debug:map_editor/panel/buttom/stru_command_area_trigger {'id':$(id)}"},"hover_event": {"action": "show_text","value": "初始化/传送 指令区域"}}]
 # tellraw @s ["     结构  >>   ", \
 #     {"selector":"@e[type=marker,tag=debug1]","click_event":{"action":"run_command","command":"/function init"},"hover_event": {"action": "show_text","value": "初始化/传送 指令区域\n如果显示为禁用, 则需要优先放置地图中心点"}},"  ", \
 #     {"selector":"@e[type=marker,tag=debug2]","click_event":{"action":"run_command","command":"/function debug:admin_panel/buttom/system_game_state"},"hover_event": {"action": "show_text","value": "初始化/传送 合作平台\n如果显示为禁用, 则需要优先放置地图中心点"}}]
