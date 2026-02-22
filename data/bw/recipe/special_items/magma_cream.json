@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O":"minecraft:copper_block"
+  },
+  "pattern": [
+    " O ",
+    "O O",
+    " O "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:magma_cream"
+  },
+  "show_notification": true
+}

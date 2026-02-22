@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "axe",
+  "key": {
+    "#":"minecraft:gold_ingot",
+    "X":"minecraft:diamond"
+  },
+  "pattern": [
+    "XX",
+    "X#",
+    " #"
+  ],
+  "result": {
+    "id": "minecraft:stone_axe"
+  },
+  "show_notification": true
+}

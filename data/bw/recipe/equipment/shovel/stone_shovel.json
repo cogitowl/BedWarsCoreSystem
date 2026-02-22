@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "shovel",
+  "key": {
+    "#":"minecraft:stick",
+    "X": "#bw:stone_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "minecraft:stone_shovel"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#":"minecraft:copper_ingot",
+    "X":"minecraft:bread"
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "id": "minecraft:golden_apple"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "pickaxe",
+  "key": {
+    "#":"minecraft:stick",
+    "X":"minecraft:iron_ingot"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "id": "minecraft:iron_pickaxe"
+  },
+  "show_notification": true
+}

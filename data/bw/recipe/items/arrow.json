@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "Y":"minecraft:iron_ingot"
+  },
+  "pattern": [
+    "Y",
+    "Y",
+    "Y"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:arrow"
+  },
+  "show_notification": true
+}

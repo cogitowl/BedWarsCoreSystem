@@ -1,0 +1,1 @@
+$data modify storage debug:map_editor/panel data.$(uuid) set from storage debug:map_editor/panel trigger

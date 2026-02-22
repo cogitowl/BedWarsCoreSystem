@@ -1,0 +1,2 @@
+$data modify entity @e[type=text_display,limit=1,tag=mutation_name] text set value {"storage":"bw:lang","nbt":"game.mutation.$(id).name","interpret": true}
+$data modify entity @e[type=text_display,limit=1,tag=mutation_desc] text set value {"storage":"bw:lang","nbt":"game.mutation.$(id).disc","interpret": true}

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "building",
+    "ingredients": [
+        "minecraft:copper_ingot"
+    ],
+    "result": {
+        "id": "minecraft:white_wool",
+        "count": 4
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "pack": {
+        "min_format": 94.1,
+        "max_format": 94.1,
+        "description": "Server Datapark for BedWars"
+    },
+    "filter":{
+    "block":[
+      {
+        "namespace":"minecraft",
+        "path":"recipe/*"
+      },
+      {
+        "namespace":"minecraft",
+        "path":"advancement/*"
+      }
+    ]
+  }
+}

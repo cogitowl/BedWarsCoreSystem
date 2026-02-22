@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "hoe",
+  "key": {
+    "#":"minecraft:stick",
+    "X":"minecraft:diamond"
+  },
+  "pattern": [
+    "XX",
+    " #",
+    " #"
+  ],
+  "result": {
+    "id": "minecraft:diamond_hoe"
+  },
+  "show_notification": true
+}

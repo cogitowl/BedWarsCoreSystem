@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        "minecraft:diamond",
+        "minecraft:diamond"
+    ],
+    "result": {
+        "id": "minecraft:gunpowder",
+        "count": 1
+    }
+}

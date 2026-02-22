@@ -1,0 +1,1 @@
+function debug:admin_panel/trigger

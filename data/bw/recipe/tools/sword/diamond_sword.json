@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sword",
+  "key": {
+    "X":"minecraft:diamond",
+    "O":"minecraft:iron_sword"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "O"
+  ],
+  "result": {
+    "id": "minecraft:diamond_sword"
+  },
+  "show_notification": true
+}

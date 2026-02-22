@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "leggings",
+  "key": {
+    "X":"minecraft:diamond",
+    "O":"minecraft:iron_leggings"
+  },
+  "pattern": [
+    "XXX",
+    "XOX",
+    "XXX"
+  ],
+  "result": {
+    "id": "minecraft:diamond_leggings"
+  },
+  "show_notification": true
+}

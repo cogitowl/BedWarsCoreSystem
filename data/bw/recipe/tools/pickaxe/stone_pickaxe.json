@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "pickaxe",
+  "key": {
+    "#":"minecraft:stick",
+    "X":"#bw:stone_tool_materials"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "id": "minecraft:stone_pickaxe"
+  },
+  "show_notification": true
+}

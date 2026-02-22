@@ -1,0 +1,1 @@
+execute as @a[team=!debug] at @s run function bw:lobby/menu/inventory/tick1_player

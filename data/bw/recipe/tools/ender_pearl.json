@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#":"minecraft:diamond"
+  },
+  "pattern": [
+    " # ",
+    "###",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:ender_pearl"
+  },
+  "show_notification": true
+}

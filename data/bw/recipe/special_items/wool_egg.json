@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O":"minecraft:iron_ingot"
+  },
+  "pattern": [
+    " O ",
+    "OOO",
+    " O "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:egg"
+  },
+  "show_notification": true
+}

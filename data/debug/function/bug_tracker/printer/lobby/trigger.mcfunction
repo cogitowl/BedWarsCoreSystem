@@ -1,0 +1,1 @@
+function debug:bug_tracker/printer/lobby/init {"storage":"debug:bug_tracker/focus","nbt":"content"}

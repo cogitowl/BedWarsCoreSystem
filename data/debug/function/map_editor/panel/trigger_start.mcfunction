@@ -1,0 +1,1 @@
+$function debug:map_editor/panel/main_body with storage debug:map_editor/panel data.$(uuid)

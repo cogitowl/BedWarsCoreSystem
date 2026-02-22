@@ -1,0 +1,1 @@
+$data modify storage debug:bug_tracker/printer content_id set from storage debug:bug_tracker/content detail[$(transfer)].id

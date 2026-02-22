@@ -1,0 +1,1 @@
+function debug:bug_tracker/printer/debug_panel/init {"storage":"debug:bug_tracker/content","nbt":"detail"}

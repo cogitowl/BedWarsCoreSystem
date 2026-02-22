@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "trapdoor",
+  "key": {
+    "#":"minecraft:acacia_planks"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:acacia_trapdoor"
+  },
+  "show_notification": true
+}

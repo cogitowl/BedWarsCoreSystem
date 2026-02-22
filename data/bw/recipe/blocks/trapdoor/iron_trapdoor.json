@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "trapdoor",
+  "key": {
+    "#":"minecraft:iron_ingot"
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "id": "minecraft:iron_trapdoor"
+  },
+  "show_notification": true
+}

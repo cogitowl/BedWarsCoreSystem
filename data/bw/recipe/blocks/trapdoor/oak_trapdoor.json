@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "trapdoor",
+  "key": {
+    "#":"minecraft:oak_planks"
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "minecraft:oak_trapdoor"
+  },
+  "show_notification": true
+}

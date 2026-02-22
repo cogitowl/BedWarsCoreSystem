@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "leggings",
+  "key": {
+    "X":"minecraft:copper_ingot",
+    "M":"leather_leggings"
+  },
+  "pattern": [
+    "XXX",
+    "XMX",
+    "XXX"
+  ],
+  "result": {
+    "id": "minecraft:chainmail_leggings"
+  },
+  "show_notification": true
+}

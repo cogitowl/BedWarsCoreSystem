@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "boots",
+  "key": {
+    "X":"minecraft:copper_ingot",
+    "O":"leather_boots"
+  },
+  "pattern": [
+    "XXX",
+    "XOX",
+    "XXX"
+  ],
+  "result": {
+    "id": "minecraft:chainmail_boots"
+  },
+  "show_notification": true
+}

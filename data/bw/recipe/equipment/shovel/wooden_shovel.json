@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "shovel",
+  "key": {
+    "#":"minecraft:stick",
+    "X":"#minecraft:planks"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "id": "minecraft:wooden_shovel"
+  },
+  "show_notification": true
+}

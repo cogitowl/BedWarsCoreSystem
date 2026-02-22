@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "chestplate",
+  "key": {
+    "X":"minecraft:diamond",
+    "O":"minecraft:iron_chestplate"
+  },
+  "pattern": [
+    "XXX",
+    "XOX",
+    "XXX"
+  ],
+  "result": {
+    "id": "minecraft:diamond_chestplate"
+  },
+  "show_notification": true
+}

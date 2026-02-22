@@ -1,0 +1,15 @@
+{
+    "function": "set_attributes",
+    "modifiers": [
+        {
+            "amount": {
+                "type": "constant",
+                "value": 4.5
+            },
+            "id": "bw:wooden_axe",
+            "attribute": "attack_damage",
+            "slot": "mainhand",
+            "operation":"add_value"
+        }
+    ]
+}
