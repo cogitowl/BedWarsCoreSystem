@@ -31,3 +31,4 @@ scoreboard players set @s music_next 1
 bossbar set lobby players @a
 
 # 载入地图
+function bw:lobby/menu/buttom/map_change
