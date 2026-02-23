@@ -1,18 +1,14 @@
+# 玩家背包内容
 
 
-
-
-# 游戏规则设定
-# 
-#
-# 最底层：游戏操作
-
-
+# 判定操作
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type:gamerule}}}}}] run function bw:lobby/menu/inventory/gamerule with entity @s equipment.offhand.components."minecraft:custom_data"
-execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type:vote}}}}}] run function bw:lobby/menu/inventory/vote with entity @s equipment.offhand.components."minecraft:custom_data"
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type:just_it}}}}}] run function bw:lobby/start_game
 execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type:map}}}}}] run function bw:lobby/menu/inventory/map with entity @s equipment.offhand.components."minecraft:custom_data"
+execute if entity @s[nbt={equipment:{offhand:{components:{"minecraft:custom_data":{type:unlock}}}}}] run function bw:lobby/map/special_lock/try
+item replace entity @s weapon.offhand with air 1
 
-
+# 填充背包
 execute if score $shop_type gamerule matches 0 run item replace entity @s inventory.0 with ender_chest[custom_name="商店类型：箱子商店",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"shop_type"}] 1
 execute if score $shop_type gamerule matches 1 run item replace entity @s inventory.0 with crafting_table[custom_name="商店类型：配方制作",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"shop_type"}] 1
 execute if score $shop_type gamerule matches 2 run item replace entity @s inventory.0 with villager_spawn_egg[custom_name="商店类型：村民交易",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"shop_type"}] 1
@@ -54,39 +50,28 @@ item replace entity @s inventory.24 with air 1
 item replace entity @s inventory.25 with air 1
 item replace entity @s inventory.26 with air 1
 
+## 切换地图
+item replace entity @s hotbar.3 with player_head[custom_name="上一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:prev},minecraft:profile=MHF_ArrowLeft] 1
+item replace entity @s hotbar.5 with player_head[custom_name="下一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:next},minecraft:profile=MHF_ArrowRight] 1
 
-execute if entity @s[tag=!out_of_energy] if score $voting vote matches 1..2 run item replace entity @s hotbar.3 with lime_wool[custom_name="赞成投票",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键赞成投票！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:agree_vote}]
-execute unless score $voting vote matches 1..2 run item replace entity @s hotbar.3 with player_head[custom_name="上一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:prev_map},minecraft:profile=MHF_ArrowLeft] 1
-
-execute if entity @s[tag=!out_of_energy] unless score $voting vote matches 1..2 run item replace entity @s hotbar.4 with iron_sword[custom_name="立刻开始投票！",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始！"]],custom_data={disabled_throw:true,lobby_item:true,type:vote,event:"trigger"}] 1
+## 没有精力
 execute if entity @s[tag=out_of_energy] run item replace entity @s hotbar.4 with player_head[custom_name="没有充足的精力，您无法参与游戏！",lore=[{"text":"您的精力值（<0点）已无法进行一局游戏，20分钟后将恢复50点精力。"},{"text":"每一局将消耗您20点精力，如果您在22点至次日4点进行游戏，则额外消耗10点精力。"},{"text":"起床战争开发组提醒您：合理安排时间！"}],custom_data={disabled_throw:true,lobby_item:true,type:vote,event:1},minecraft:profile=MHF_Question] 1
 
-execute if entity @s[tag=!out_of_energy] if score $voting vote matches 1..2 run item replace entity @s hotbar.5 with red_wool[custom_name="拒绝投票",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键拒绝投票！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:refuse_vote}]
-execute unless score $voting vote matches 1..2 run item replace entity @s hotbar.5 with player_head[custom_name="下一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:next_map},minecraft:profile=MHF_ArrowRight] 1
+## 没有解锁
+execute if entity @s[tag=!out_of_energy] if data storage bw:map using.lock.special run item replace entity @s hotbar.4 with lever[custom_name="立刻解锁这张地图！",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始！"]],custom_data={disabled_throw:true,lobby_item:true,type:unlock}] 1
+
+## 开始游戏
+execute if entity @s[tag=!out_of_energy] unless data storage bw:map using.lock.special run item replace entity @s hotbar.4 with iron_sword[custom_name="开始游戏",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键立刻开始游戏！"]],custom_data={disabled_throw:true,lobby_item:true,type:just_it}]
+
 
 execute unless score @s vote matches 1..2 if score $voting vote matches 1..2 run item replace entity @s hotbar.4 with air 1
 
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.0 with air 1
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.1 with air 1
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.2 with air 1
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.6 with air 1
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.7 with air 1
-execute unless score @s vote matches 1..2 run item replace entity @s hotbar.8 with air 1
-
-
-execute if score @s vote matches 1 run item replace entity @s hotbar.0 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.1 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.2 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.3 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.4 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.5 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.6 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.7 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 1 run item replace entity @s hotbar.8 with lime_wool[custom_name="投票已赞成！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-
-execute if score @s vote matches 2 run item replace entity @s[scores={vote=2}] hotbar.3 with red_wool[custom_name="投票已否决！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 2 run item replace entity @s[scores={vote=2}] hotbar.4 with red_wool[custom_name="投票已否决！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
-execute if score @s vote matches 2 run item replace entity @s[scores={vote=2}] hotbar.5 with red_wool[custom_name="投票已否决！",custom_data={disabled_throw:true,lobby_item:true,type:map,event:''}]
+item replace entity @s hotbar.0 with air 1
+item replace entity @s hotbar.1 with air 1
+item replace entity @s hotbar.2 with air 1
+item replace entity @s hotbar.6 with air 1
+item replace entity @s hotbar.7 with air 1
+item replace entity @s hotbar.8 with air 1
 
 
 

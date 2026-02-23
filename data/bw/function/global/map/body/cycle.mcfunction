@@ -2,7 +2,8 @@
 
 # execute
 $execute unless blocks ~ -64 ~$(z1) ~ 64 ~$(z2) ~ -64 ~ all run function bw:global/map/body/execute with storage bw:map clone.cycle
-$kill @e[y=-64,dz=$(z4),dy=128,type=!player]
+$kill @e[type=!player,y=-64,dy=128,dz=$(z4),dx=-10]
+$kill @e[type=!player,y=-64,dy=128,dz=$(z4),dx=10]
 
 particle end_rod ~ 20 ~40 0 -10 20 1 100 normal @a
 particle end_rod ~ 20 ~40 0 -10 -20 1 100 normal @a

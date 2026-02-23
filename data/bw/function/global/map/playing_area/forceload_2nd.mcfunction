@@ -1,4 +1,1 @@
-$forceload add ~ ~ ~$(distance) ~$(distance)
-$forceload add ~ ~ ~-$(distance) ~$(distance)
-$forceload add ~ ~ ~$(distance) ~-$(distance)
-$forceload add ~ ~ ~-$(distance) ~-$(distance)
+$execute positioned $(x) $(y) $(z) run function bw:global/map/playing_area/forceload_3nd with storage bw:map using.generate_entity

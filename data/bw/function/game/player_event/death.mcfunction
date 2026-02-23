@@ -55,7 +55,7 @@ function bw:game/update_round_info
 
 # 判定游戏结束
 function bw:game/team_update
-execute unless score $disable_auto_ending maintenance matches 1 if score $team_number team matches ..1 run function bw:game/game_end
+execute unless score $disable_auto_ending maintenance matches 1 if score $team_number team matches ..1 run function bw:game/end
 
 # 随机事件
 function bw:game/mutation/trigger/player_death

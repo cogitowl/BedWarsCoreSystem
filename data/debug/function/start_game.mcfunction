@@ -4,20 +4,21 @@ execute if score $working gaming matches 1 run return run tellraw @s ["",{"text"
 
 tag @a[team=!debug] add player
 
-execute if score $voting vote matches 1..2 run function bw:lobby/vote/cancel
+# 同步选择 与 随机地图
+execute if score $sel map matches 0 run function bw:lobby/map/change/random with storage bw:basic map
+execute if score $sel map matches 0 run scoreboard players operation $using map = $map_random temp
+execute unless score $sel map matches 0 run scoreboard players operation $using map = $sel map
 
-# 同步地图选择
-scoreboard players operation $using map = $sel map
+# 要求读取数据
+execute store result storage bw:basic temp.id int 1 run scoreboard players get $using map
+function bw:global/map/playing_area/copy_data with storage bw:basic temp
 
-# 随机地图
-execute if score $using map matches 0 run function bw:lobby/map/choice/random with storage bw:basic map
-
-# 加载地图中心点
-function bw:global/map/playing_area/generate_entity
+# 加载地图并放置中心点
+function bw:global/map/playing_area/trigger
 
 # 快速模式
 execute if score #sys_working map = $using map run scoreboard players set $fast_mode temp 1
 execute if score #sys_working map = $using map run say [地图复制系统] 当前投票中的地图正在复制中，系统正在加速复制，造成卡顿属于正常现象。
 
-function bw:lobby/vote/start
+function bw:game/start
 tellraw @a [{"text": "[⏻] ","bold": true,"color": "aqua"},{"text": "管理员已强制启动游戏！","color": "aqua","bold": false}]

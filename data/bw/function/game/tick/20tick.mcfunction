@@ -18,7 +18,7 @@ execute if score $now timing = $res_update_3 timing run function bw:game/timing_
 
 execute if score $now timing = $bed_break timing run function bw:game/timing_event/bed_break
 execute if score $now timing = $border_shrink timing if score $border gamerule matches 1 run function bw:game/timing_event/border_shrink
-execute if score $now timing = $game_end timing unless score $disable_auto_ending maintenance matches 1 run function bw:game/game_end
+execute if score $now timing = $game_end timing unless score $disable_auto_ending maintenance matches 1 run function bw:game/end
 
 ## 下一个事件
 scoreboard players set $next_event timing 2147483647

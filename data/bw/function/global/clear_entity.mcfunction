@@ -20,10 +20,7 @@ kill @e[type=marker,tag=border]
 kill @e[tag=temp]
 
 # 中心点 
-# kill @e[type=marker,tag=map_center]
-
-# 清除强加载者
-# kill @e[type=armor_stand,tag=forceloader]
+kill @e[type=marker,tag=playing_center]
 
 # 清除其他实体
 kill @e[type=fireball]

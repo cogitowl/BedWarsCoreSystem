@@ -1,0 +1,1 @@
+$spreadplayers $(x) $(z) 80 80 false @s

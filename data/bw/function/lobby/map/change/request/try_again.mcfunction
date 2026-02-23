@@ -1,0 +1,2 @@
+execute if score $change_mode map matches 1 run return run function bw:lobby/map/change/request/prev
+execute if score $change_mode map matches 2 run return run function bw:lobby/map/change/request/next

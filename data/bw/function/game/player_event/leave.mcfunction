@@ -8,7 +8,7 @@ function bw:game/resource/cd_cal_trigger
 
 # 检测是否可以结束游戏
 function bw:game/team_update
-execute unless score $disable_auto_ending maintenance matches 1 unless score $team_number team matches 2.. run function bw:game/game_end
+execute unless score $disable_auto_ending maintenance matches 1 unless score $team_number team matches 2.. run function bw:game/end
 
 # （地图接口）玩家离开
 setblock -2 50 -32 minecraft:redstone_block

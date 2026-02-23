@@ -1,7 +1,7 @@
 
 
 # 锁定地图
-$execute unless data storage bw:map maps[{"id":$(id)d}].map_editor_lock run function debug:map_editor/operation/lock with storage debug:map_editor/panel data.$(uuid)
+$execute unless data storage bw:map maps[{"id":$(id)d}].map_editor.lock run function debug:map_editor/operation/lock with storage debug:map_editor/panel data.$(uuid)
 
 # 补全数据
 $execute if data storage bw:map maps[{"id":$(id)d}].spawner run data modify storage bw:map maps[{"id":$(id)d}].map_editor.resource.status.done set value true

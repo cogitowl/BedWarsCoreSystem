@@ -9,4 +9,4 @@ setblock -8 50 -32 air
 setblock -8 50 -32 redstone_block
 
 # 超时响应
-schedule function bw:lobby/map/command_area/unload/out_time 5s append
+schedule function bw:lobby/map/command_area/unload/out_time 2s append

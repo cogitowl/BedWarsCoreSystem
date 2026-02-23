@@ -1,4 +1,3 @@
-#> bw:game/game_end
 # 游戏结束文件
 
 # （地图接口）游戏结束
@@ -38,15 +37,16 @@ tag @a remove total_rank3
 tag @a remove total_rankl
 
 ## 1
-function bw:game/gane_end_get_max_score
+function bw:game/system_end/get_max_score
 execute as @a if score @s round_exp = $score_max temp run tag @s add total_rank1
 tag @a[tag=total_rank1] add max_uncounted
 ## 2
-function bw:game/gane_end_get_max_score
+function bw:game/system_end/get_max_score
+
 execute as @a[tag=!max_uncounted] if score @s round_exp = $score_max temp run tag @s add total_rank2
 tag @a[tag=total_rank2] add max_uncounted
 ## 3
-function bw:game/gane_end_get_max_score
+function bw:game/system_end/get_max_score
 execute as @a[tag=!max_uncounted] if score @s round_exp = $score_max temp run tag @s add total_rank3
 tag @a[tag=max_uncounted] remove max_uncounted
 ## 最低分

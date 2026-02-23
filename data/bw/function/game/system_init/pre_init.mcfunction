@@ -1,0 +1,1 @@
+function bw:global/map/playing_area/trigger

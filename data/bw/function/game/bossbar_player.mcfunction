@@ -9,3 +9,7 @@ bossbar set countdown:blue players @a[team=blue]
 bossbar set countdown:green players @a[team=green]
 bossbar set countdown:yellow players @a[team=yellow]
 bossbar set countdown:spec players @a[team=spec]
+
+
+# 移除大厅 bossbar
+bossbar set lobby players

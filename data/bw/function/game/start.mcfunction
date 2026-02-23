@@ -2,7 +2,12 @@
 # 游戏载入和开始
 
 # 以中心点的位置执行游戏开始文件
+# execute unless entity @s[type=marker,tag=playing_center] as @e[type=marker,tag=playing_center] if score @s map = $using map at @s run return run function bw:game/start
+execute unless entity @s[type=marker,tag=playing_center] run function bw:game/system_init/pre_init
 execute unless entity @s[type=marker,tag=playing_center] as @e[type=marker,tag=playing_center] if score @s map = $using map at @s run return run function bw:game/start
+
+# 初始化指令区域
+execute unless score $disable_command_block maintenance matches 0 run function bw:lobby/map/command_area/setup
 
 # 游戏规则
 ## ! 需要重置
