@@ -15,7 +15,8 @@ function bw:global/map/playing_area/forceload_2nd with storage bw:map using.gene
 
 ## 强加载游玩区域
 scoreboard players add $using_z map 1000
-execute store result storage bw:map using.generate_entity.y int 1 run scoreboard players get $using_y map
+execute store result storage bw:map using.generate_entity.z int 1 run scoreboard players get $using_z map
+tellraw @a {"storage":"bw:map",nbt:"using.generate_entity"} 
 
 function bw:global/map/playing_area/forceload_2nd with storage bw:map using.generate_entity
 
