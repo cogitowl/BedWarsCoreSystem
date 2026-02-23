@@ -1,5 +1,9 @@
 # 全局初始化
 
+# 笨蛋检测器
+kill @e[type=marker,tag=entity_loss]
+summon marker 0 0 0 {"Tags":["entity_loss"]}
+
 # 世界边界
 worldborder center 0 0
 worldborder set 29999984

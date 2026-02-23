@@ -23,5 +23,5 @@ execute as @e[type=arrow,tag=!projectile_checked] run function bw:global/event/a
 function bw:global/music/tick20
 
 # 笨蛋检查器
-execute unless entity @e[type=!player,type=!item,type=!experience_orb] run save-off
-execute unless entity @e[type=!player,type=!item,type=!experience_orb] run tellraw @a ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ☢  灾难性系统错误（全部实体丢失）","color":"aqua"},"\n",{"text": "     排除玩家、物品实体外，系统没有侦测到其他实体。系统已阻断自动保存。","color": "gray"},"\n\n",{"text": "      ☀ 如果您是玩家 >>\n"},{"text": "         请携带此提示的完整截图，在交流群与我们的服务器管理员取得联系。"},"\n\n",{"text": "      ☁ 如果您是汐之恒服务器管理员 >>\n"},{"text": "         请发送 "},{"text": "!!MCDR server kill","click_event": {"action": "suggest_command","command": "!!MCDR server kill"},"hover_event": {"action": "show_text","value": "单击自动填入 !!MCDR server kill "}}," 强制杀死子服进程。","\n"]
+execute unless entity @e[type=marker,tag=entity_loss] run save-off
+execute unless entity @e[type=!player,tag=entity_loss] run tellraw @a ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ☢  灾难性系统错误（全部实体丢失）","color":"aqua"},"\n",{"text": "     全局系统已丢失必要运作实体。为了保护游戏安全，系统已阻断自动保存。","color": "gray"},"\n\n",{"text": "      ☀ 如果您是玩家 >>\n"},{"text": "         请携带此提示的完整截图，在交流群与我们的服务器管理员取得联系。"},"\n\n",{"text": "      ☁ 如果您是汐之恒服务器管理员 >>\n"},{"text": "         请发送 "},{"text": "!!MCDR server kill","click_event": {"action": "suggest_command","command": "!!MCDR server kill"},"hover_event": {"action": "show_text","value": "单击自动填入 !!MCDR server kill "}}," 强制杀死子服进程。","\n"]
