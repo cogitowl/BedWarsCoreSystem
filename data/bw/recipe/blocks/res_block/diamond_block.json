@@ -10,7 +10,8 @@
     "###"
   ],
   "result": {
-    "id": "minecraft:diamond_block"
+    "id": "minecraft:diamond_block",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

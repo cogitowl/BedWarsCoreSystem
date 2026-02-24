@@ -1,6 +1,6 @@
 {
     "type": "minecraft:crafting_shaped",
-    "category": "misc",
+    "category": "redstone",
     "key": {
         "#": "minecraft:iron_ingot"
     },
@@ -11,7 +11,8 @@
     ],
     "result": {
         "count": 1,
-        "id": "minecraft:experience_bottle"
+        "id": "minecraft:experience_bottle",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
     },
     "show_notification": true
 }

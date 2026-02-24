@@ -3,10 +3,11 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-      "minecraft:birch_log"
+      "#birch_logs"
   ],
   "result": {
-    "count": 4,
-    "id": "minecraft:birch_planks"
+    "count": 6,
+    "id": "minecraft:birch_planks",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

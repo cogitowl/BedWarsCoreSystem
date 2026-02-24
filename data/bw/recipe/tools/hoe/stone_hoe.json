@@ -12,7 +12,8 @@
     " #"
   ],
   "result": {
-    "id": "minecraft:stone_hoe"
+    "id": "minecraft:stone_hoe",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

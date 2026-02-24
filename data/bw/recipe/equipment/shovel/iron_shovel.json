@@ -12,7 +12,8 @@
     "#"
   ],
   "result": {
-    "id": "minecraft:iron_shovel"
+    "id": "minecraft:iron_shovel",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

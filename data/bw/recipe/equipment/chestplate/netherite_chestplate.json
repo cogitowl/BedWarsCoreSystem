@@ -3,16 +3,17 @@
   "category": "equipment",
   "group": "chestplate",
   "key": {
-    "X":"minecraft:copper_ingot",
-    "O":"minecraft:leather_chestplate"
+    "X":"minecraft:diamond",
+    "O":"minecraft:diamond_chestplate",
+    "M":"minecraft:iron_ingot"
   },
   "pattern": [
-    "XXX",
+    "MXM",
     "XOX",
-    "XXX"
+    "MXM"
   ],
   "result": {
-    "id": "minecraft:chainmail_chestplate",
+    "id": "minecraft:netherite_chestplate",
     "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true

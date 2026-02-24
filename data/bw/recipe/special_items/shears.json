@@ -9,7 +9,8 @@
     "# "
   ],
   "result": {
-    "id": "minecraft:shears"
+    "id": "minecraft:shears",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

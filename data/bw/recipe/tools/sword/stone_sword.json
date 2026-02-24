@@ -13,6 +13,7 @@
     ],
     "result": {
         "id": "minecraft:stone_sword",
-        "count": 1
+        "count": 1,
+    "components": {"custom_data": {"special_item":true,"craft":true}}
     }
 }

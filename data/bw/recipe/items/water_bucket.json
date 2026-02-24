@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "key": {
     "#":"minecraft:iron_ingot"
   },
@@ -9,7 +9,8 @@
     " # "
   ],
   "result": {
-    "id": "minecraft:water_bucket"
+    "id": "minecraft:water_bucket",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

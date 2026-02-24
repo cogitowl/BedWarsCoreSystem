@@ -8,7 +8,8 @@
     "###"
   ],
   "result": {
-    "id": "minecraft:bread"
+    "id": "minecraft:bread",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

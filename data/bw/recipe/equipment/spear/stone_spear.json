@@ -12,6 +12,7 @@
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:stone_spear"
+    "id": "minecraft:stone_spear",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

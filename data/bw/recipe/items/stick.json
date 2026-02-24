@@ -11,7 +11,8 @@
   ],
   "result": {
     "count": 4,
-    "id": "minecraft:stick"
+    "id": "minecraft:stick",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

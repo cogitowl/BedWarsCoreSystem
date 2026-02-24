@@ -3,10 +3,11 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    "#minecraft:crimson_stems"
+    "#crimson_stems"
   ],
   "result": {
-    "count": 4,
-    "id": "minecraft:crimson_planks"
+    "count": 6,
+    "id": "minecraft:crimson_planks",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

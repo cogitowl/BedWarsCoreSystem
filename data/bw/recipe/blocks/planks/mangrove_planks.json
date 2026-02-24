@@ -3,10 +3,11 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-    "minecraft:mangrove_log"
+    "#mangrove_logs"
   ],
   "result": {
-    "count": 4,
-    "id": "minecraft:mangrove_planks"
+    "count": 6,
+    "id": "minecraft:mangrove_planks",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

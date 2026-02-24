@@ -3,15 +3,17 @@
   "category": "misc",
   "key": {
     "#":"minecraft:copper_ingot",
-    "X":"minecraft:bread"
+    "X":"minecraft:bread",
+    "Y":"iron_ingot"
   },
   "pattern": [
-    "###",
+    "#Y#",
     "#X#",
-    "###"
+    "#Y#"
   ],
   "result": {
-    "id": "minecraft:golden_apple"
+    "id": "minecraft:golden_apple",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

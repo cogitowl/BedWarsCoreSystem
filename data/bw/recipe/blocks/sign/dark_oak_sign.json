@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "group": "wooden_sign",
   "key": {
     "#":"minecraft:dark_oak_planks",
@@ -13,7 +13,8 @@
   ],
   "result": {
     "count": 3,
-    "id": "minecraft:dark_oak_sign"
+    "id": "minecraft:dark_oak_sign",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

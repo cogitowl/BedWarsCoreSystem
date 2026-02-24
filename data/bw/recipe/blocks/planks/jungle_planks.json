@@ -3,10 +3,11 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-      "minecraft:jungle_log"
+      "#jungle_logs"
   ],
   "result": {
-    "count": 4,
-    "id": "minecraft:jungle_planks"
+    "count": 6,
+    "id": "minecraft:jungle_planks",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

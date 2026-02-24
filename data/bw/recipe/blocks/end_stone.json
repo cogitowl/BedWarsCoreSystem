@@ -6,6 +6,7 @@
 ],
   "result": {
     "count": 4,
-    "id": "minecraft:end_stone"
+    "id": "minecraft:end_stone",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

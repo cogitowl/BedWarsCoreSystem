@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "group": "trapdoor",
   "key": {
     "#":"minecraft:iron_ingot"
@@ -10,7 +10,8 @@
     "##"
   ],
   "result": {
-    "id": "minecraft:iron_trapdoor"
+    "id": "minecraft:iron_trapdoor",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

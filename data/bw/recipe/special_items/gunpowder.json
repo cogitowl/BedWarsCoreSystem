@@ -1,12 +1,13 @@
 {
     "type": "minecraft:crafting_shapeless",
-    "category": "misc",
+    "category": "redstone",
     "ingredients": [
         "minecraft:diamond",
         "minecraft:diamond"
     ],
     "result": {
         "id": "minecraft:gunpowder",
-        "count": 1
+        "count": 1,
+    "components": {"custom_data": {"special_item":true,"craft":true}}
     }
 }

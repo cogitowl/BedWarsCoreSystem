@@ -12,7 +12,8 @@
     " # "
   ],
   "result": {
-    "id": "minecraft:wooden_pickaxe"
+    "id": "minecraft:wooden_pickaxe",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

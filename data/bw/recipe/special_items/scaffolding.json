@@ -1,19 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
-  "group": "wooden_sign",
   "key": {
-    "#":"minecraft:warped_planks",
-    "X":"minecraft:stick"
+    "O":"minecraft:copper_ingot"
   },
   "pattern": [
-    "###",
-    "###",
-    " X "
+    " O ",
+    "O O",
+    " O "
   ],
   "result": {
-    "count": 3,
-    "id": "minecraft:warped_sign",
+    "count": 1,
+    "id": "minecraft:scaffolding",
     "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true

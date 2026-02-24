@@ -6,6 +6,7 @@
   "group": "copper_ingot",
   "ingredient": "minecraft:raw_copper",
   "result": {
-    "id": "minecraft:copper_ingot"
+    "id": "minecraft:copper_ingot",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

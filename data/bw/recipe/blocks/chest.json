@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": "#minecraft:planks"
   },
@@ -10,7 +10,8 @@
     "###"
   ],
   "result": {
-    "id": "minecraft:chest"
+    "id": "minecraft:chest",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

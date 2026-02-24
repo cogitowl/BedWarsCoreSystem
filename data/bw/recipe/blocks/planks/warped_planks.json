@@ -3,10 +3,11 @@
   "category": "building",
   "group": "planks",
   "ingredients": [
-     "minecraft:warped_stem"
+     "#warped_stems"
   ],
   "result": {
-    "count": 4,
-    "id": "minecraft:warped_planks"
+    "count": 6,
+    "id": "minecraft:warped_planks",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   }
 }

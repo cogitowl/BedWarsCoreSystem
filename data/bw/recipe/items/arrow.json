@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "key": {
     "Y":"minecraft:iron_ingot"
   },
   "pattern": [
     "Y",
-    "Y",
     "Y"
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:arrow"
+    "id": "minecraft:arrow",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

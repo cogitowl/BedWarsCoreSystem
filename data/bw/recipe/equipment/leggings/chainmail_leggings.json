@@ -12,7 +12,8 @@
     "XXX"
   ],
   "result": {
-    "id": "minecraft:chainmail_leggings"
+    "id": "minecraft:chainmail_leggings",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

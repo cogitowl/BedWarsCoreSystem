@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "key": {
     "#":"minecraft:diamond"
   },
@@ -11,7 +11,8 @@
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:ender_pearl"
+    "id": "minecraft:ender_pearl",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "group": "trapdoor",
   "key": {
     "#":"minecraft:oak_planks"
@@ -11,7 +11,8 @@
   ],
   "result": {
     "count": 2,
-    "id": "minecraft:oak_trapdoor"
+    "id": "minecraft:oak_trapdoor",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

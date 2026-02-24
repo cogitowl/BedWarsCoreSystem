@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "redstone",
   "key": {
     "#": "minecraft:iron_ingot",
     "X":"minecraft:copper_ingot"
@@ -11,7 +11,8 @@
     "X#X"
   ],
   "result": {
-    "id": "minecraft:tnt"
+    "id": "minecraft:tnt",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }

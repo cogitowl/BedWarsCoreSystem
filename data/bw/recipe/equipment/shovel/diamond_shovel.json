@@ -12,7 +12,8 @@
     "#"
   ],
   "result": {
-    "id": "minecraft:diamond_shovel"
+    "id": "minecraft:diamond_shovel",
+    "components": {"custom_data": {"special_item":true,"craft":true}}
   },
   "show_notification": true
 }
