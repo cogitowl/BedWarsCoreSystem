@@ -78,6 +78,9 @@ scoreboard players set $exchange config 1
 ## 团队名称（2=4v4 4=4v4v4v4）
 scoreboard players set $team_number config 2
 
+## 最大生命值（$max_health）
+scoreboard players set $max_health config 1
+
 # 时间事件（数字代表开始游戏后多少秒执行）
 ## 事件提前提醒
 scoreboard players set $timing_notice config 15

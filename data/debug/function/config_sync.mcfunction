@@ -34,6 +34,7 @@ scoreboard players operation $border gamerule = $border config
 scoreboard players operation $daylight_cycle gamerule = $daylight_cycle config
 scoreboard players operation $exchange gamerule = $exchange config
 scoreboard players operation $team_number gamerule = $team_number config
+scoreboard players operation $max_health gamerule = $max_health config
 
 # 时间事件
 scoreboard players operation $notice timing = $timing_notice config
