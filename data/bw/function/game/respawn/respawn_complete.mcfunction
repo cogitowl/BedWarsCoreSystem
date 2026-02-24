@@ -17,3 +17,6 @@ function bw:game/default_kit
 
 # 重新进入地图
 function bw:game/map/enter
+
+# 给予周边玩家提示
+execute at @s as @a[distance=0.1..20] run tag @s add tip_birth_invincible
