@@ -38,7 +38,10 @@ scoreboard objectives remove break_blue
 scoreboard objectives add break_blue mined:blue_bed "破坏蓝床"
 
 scoreboard objectives remove round_info
-scoreboard objectives add round_info dummy "本局信息"
+scoreboard objectives add round_info dummy "起床战争"
+
+scoreboard objectives remove round_info_config
+scoreboard objectives add round_info_config dummy "本局信息配置"
 
 scoreboard objectives remove return_scroll_holding
 scoreboard objectives add return_scroll_holding dummy "回城卷轴使用"
@@ -142,19 +145,11 @@ team modify red color red
 team modify red friendlyFire false
 team modify red collisionRule never
 
-team remove red_info
-team add red_info
-team join red_info §c红队 
-
 team remove blue
 team add blue "蓝队"
 team modify blue color blue
 team modify blue friendlyFire false
 team modify blue collisionRule never
-
-team remove blue_info
-team add blue_info
-team join blue_info §9蓝队
 
 team remove yellow
 team add yellow "黄队"
@@ -162,19 +157,11 @@ team modify yellow color yellow
 team modify yellow friendlyFire false
 team modify yellow collisionRule never
 
-team remove yellow_info
-team add yellow_info
-team join yellow_info §e黄队
-
 team remove green
 team add green "绿队"
 team modify green color green
 team modify green friendlyFire false
 team modify green collisionRule never
-
-team remove green_info
-team add green_info
-team join green_info §a绿队
 
 # Boss 栏
 bossbar remove countdown:green

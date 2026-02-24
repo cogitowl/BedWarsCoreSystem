@@ -51,7 +51,7 @@ scoreboard players remove @s round_exp 2
 clear @s
 
 # 刷新本局信息
-function bw:game/update_round_info
+function bw:game/system_event/update_scoreboard
 
 # 判定游戏结束
 function bw:game/team_update
@@ -64,6 +64,9 @@ function bw:game/mutation/trigger/player_death
 function bw:global/music/trigger
 scoreboard players operation @s music_time = $ respawn_time
 scoreboard players add @s music_time 2
+
+# 重置经验显示
+function bw:global/event/exp_regain
 
 # 收尾
 tag @a remove killer

@@ -104,7 +104,7 @@ effect clear
 effect give @s regeneration 3 255 true
 
 # 刷新本局信息
-function bw:game/update_round_info
+function bw:game/system_event/update_scoreboard
 
 # 音乐控制
 scoreboard players set @s music_next 2

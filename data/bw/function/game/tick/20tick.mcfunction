@@ -1,7 +1,5 @@
 # 每 20 Tick 执行一次
 
-# 玩家时钟
-execute as @a[tag=playing,tag=!afk,team=!debug] at @s run function bw:game/tick/20tick_player
 
 # 时间事件
 ## 正计时
@@ -86,6 +84,9 @@ execute unless score $working mutation matches 1.. run bossbar set countdown:red
 execute unless score $working mutation matches 1.. run bossbar set countdown:yellow name {"storage":"bw:lang","nbt":"game.event.bossbar.normal","interpret": true}
 execute unless score $working mutation matches 1.. run bossbar set countdown:spec name {"storage":"bw:lang","nbt":"game.event.bossbar.normal","interpret": true}
 
+# 玩家时钟
+execute as @a[tag=playing,tag=!afk,team=!debug] at @s run function bw:game/tick/20tick_player
+
 # 调用资源点模块
 execute as @e[type=armor_stand,tag=res] at @s run function bw:game/resource/tick20
 
@@ -115,6 +116,9 @@ execute if score $working mutation matches 1.. run function bw:game/mutation/tri
 
 # 调用特殊物品
 function bw:game/special_items/tick20
+
+# 提示类
+function bw:game/map/sub/tip
 
 # （地图接口）每秒尝试放置红石块
 setblock 2 50 -32 minecraft:redstone_block

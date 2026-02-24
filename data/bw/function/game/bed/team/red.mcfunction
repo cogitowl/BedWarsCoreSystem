@@ -21,4 +21,4 @@ scoreboard players set $red_bed team 2
 tag @a[team=red] add lose_bed
 
 # 刷新本局信息
-function bw:game/update_round_info
+function bw:game/system_event/update_scoreboard

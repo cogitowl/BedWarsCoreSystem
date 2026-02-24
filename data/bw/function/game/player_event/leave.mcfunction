@@ -1,7 +1,7 @@
 # 玩家退出游戏事件
 
 # 刷新本局信息
-function bw:game/update_round_info
+function bw:game/system_event/update_scoreboard
 
 # 刷新资源点冷却时间
 function bw:game/resource/cd_cal_trigger
