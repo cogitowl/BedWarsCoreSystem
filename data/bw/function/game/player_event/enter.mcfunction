@@ -103,6 +103,10 @@ function bw:game/map/enter
 effect clear
 effect give @s regeneration 3 255 true
 
+# 修饰器
+execute if score $max_health gamerule matches 1 run attribute @s max_health modifier add maxhealth_one 10 add_value
+execute if score $max_health gamerule matches 2 run attribute @s max_health modifier add maxhealth_two 20 add_value
+
 # 刷新本局信息
 function bw:game/system_event/update_scoreboard
 

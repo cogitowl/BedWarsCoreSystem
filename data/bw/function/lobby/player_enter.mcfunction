@@ -6,6 +6,10 @@ gamemode adventure @s
 attribute @s max_health base set 20
 attribute @s attack_speed base set 4
 
+# 修饰器
+attribute @s max_health modifier remove maxhealth_one
+attribute @s max_health modifier remove maxhealth_two
+
 # 清理残留数据
 tag @s remove playing
 tag @s remove lose_bed

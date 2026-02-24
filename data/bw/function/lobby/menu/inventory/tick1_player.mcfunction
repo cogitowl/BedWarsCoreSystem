@@ -27,6 +27,10 @@ execute if score $void_damage gamerule matches 0 run item replace entity @s inve
 execute if score $void_damage gamerule matches 1 run item replace entity @s inventory.4 with redstone_block[custom_name="虚空伤害：增加伤害",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"void_damage"}] 1
 execute if score $void_damage gamerule matches 2 run item replace entity @s inventory.4 with nether_wart_block[custom_name="虚空伤害：立即击杀",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"void_damage"}] 1
 
+execute if score $max_health gamerule matches 0 run item replace entity @s inventory.5 with leather_horse_armor[custom_name="最大生命值：原版生命值",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"max_health"}] 1
+execute if score $max_health gamerule matches 1 run item replace entity @s inventory.5 with iron_horse_armor[custom_name="最大生命值：增加生命值",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"max_health"}] 1
+execute if score $max_health gamerule matches 2 run item replace entity @s inventory.5 with diamond_horse_armor[custom_name="最大生命值：双倍生命值",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"max_health"}] 1
+
 ## 切换地图
 item replace entity @s hotbar.3 with player_head[custom_name="上一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:prev},minecraft:profile=MHF_ArrowLeft] 1
 item replace entity @s hotbar.5 with player_head[custom_name="下一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:next},minecraft:profile=MHF_ArrowRight] 1
