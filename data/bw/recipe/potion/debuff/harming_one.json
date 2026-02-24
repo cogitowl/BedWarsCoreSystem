@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "harming",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "Y": "minecraft:stone_sword"
+  },
+  "pattern": [
+    "#Y#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:potion",
+    "components": {"custom_data": {"special_item":true,"craft":true},"potion_contents": {"potion":"harming"}}
+  },
+  "show_notification": true
+}

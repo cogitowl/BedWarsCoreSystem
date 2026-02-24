@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "strong_swiftness",
+  "key": {
+    "#": "minecraft:copper_ingot",
+    "Y": "minecraft:bread"
+  },
+  "pattern": [
+    "YYY",
+    "#Y#",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:potion",
+    "components": {"custom_data": {"special_item":true,"craft":true},"potion_contents": {"potion":"strong_swiftness"}}
+  },
+  "show_notification": true
+}
