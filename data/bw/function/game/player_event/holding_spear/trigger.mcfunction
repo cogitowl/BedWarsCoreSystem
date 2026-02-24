@@ -1,0 +1,1 @@
+execute at @s summon horse run function bw:game/player_event/holding_spear/entity_init

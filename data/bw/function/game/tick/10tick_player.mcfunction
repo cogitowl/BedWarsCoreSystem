@@ -21,3 +21,8 @@ execute if score $void_damage gamerule matches 2 as @s[x=-200,y=-200,z=-200,dx=4
 
 # 调用特殊物品
 function bw:game/special_items/tick10
+
+# 持矛事件
+execute as @a[predicate=bw:game/holding_spears] at @s unless predicate bw:game/have_vehicle run function bw:game/player_event/holding_spear/trigger
+execute as @e[type=horse,tag=holding_spear] at @s unless entity @a[distance=..1] run kill @s
+execute as @a[predicate=bw:game/have_vehicle] unless entity @s[predicate=bw:game/holding_spears] on vehicle if entity @s[type=horse,tag=holding_spear] run kill @s
