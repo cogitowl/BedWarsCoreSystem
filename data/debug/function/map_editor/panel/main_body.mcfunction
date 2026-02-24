@@ -45,17 +45,17 @@ $execute unless data storage bw:map maps[{"id":$(id)d}].border.min run summon ma
 $execute if data storage bw:map maps[{"id":$(id)d}].border.max run summon marker ~ ~ ~ {CustomName:{"text":"[最大边界]","color":"green"},Tags:["debug5"]}
 $execute unless data storage bw:map maps[{"id":$(id)d}].border.max run summon marker ~ ~ ~ {CustomName:{"text":"[最大边界]","color":"red"},Tags:["debug5"]}
 
-$execute unless data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[资源点、床 禁用]","color":"gray"},Tags:["debug6"]}
-$execute unless entity @e[type=marker,tag=debug6] if data storage bw:map maps[{"id":$(id)d}].map_editor.resource.status.placing run summon marker ~ ~ ~ {CustomName:{"text":"[资源点 正在放置]","color":"gray"},Tags:["debug6"]}
-$execute unless entity @e[type=marker,tag=debug6] if data storage bw:map maps[{"id":$(id)d}].map_editor.resource.status.done run summon marker ~ ~ ~ {CustomName:{"text":"[资源点]","color":"green"},Tags:["debug6"]}
-execute unless entity @e[type=marker,tag=debug6] run summon marker ~ ~ ~ {CustomName:{"text":"[资源点]","color":"red"},Tags:["debug6"]}
+$execute if data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[中心点]","color":"green"},Tags:["debug6"]}
+$execute unless data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[中心点]","color":"red"},Tags:["debug6"]}
 
 $execute unless data storage bw:map maps[{"id":$(id)d}].team run summon marker ~ ~ ~ {CustomName:{"text":"[队伍]","color":"red"},Tags:["debug7"]}
 $execute if data storage bw:map maps[{"id":$(id)d}].team run summon marker ~ ~ ~ {CustomName:{"text":"[队伍]","color":"green"},Tags:["debug7"]}
 
+$execute unless data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[资源点 禁用]","color":"gray"},Tags:["debug8"]}
+$execute unless entity @e[type=marker,tag=debug8] if data storage bw:map maps[{"id":$(id)d}].map_editor.resource.status.placing run summon marker ~ ~ ~ {CustomName:{"text":"[资源点 正在放置]","color":"gray"},Tags:["debug8"]}
+$execute unless entity @e[type=marker,tag=debug8] if data storage bw:map maps[{"id":$(id)d}].map_editor.resource.status.done run summon marker ~ ~ ~ {CustomName:{"text":"[资源点]","color":"green"},Tags:["debug8"]}
+execute unless entity @e[type=marker,tag=debug8] run summon marker ~ ~ ~ {CustomName:{"text":"[资源点]","color":"red"},Tags:["debug8"]}
 
-$execute if data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[中心点]","color":"green"},Tags:["debug8"]}
-$execute unless data storage bw:map maps[{"id":$(id)d}].center run summon marker ~ ~ ~ {CustomName:{"text":"[中心点]","color":"red"},Tags:["debug8"]}
 $execute if data storage bw:map maps[{"id":$(id)d}].visit run summon marker ~ ~ ~ {CustomName:{"text":"[参观点]","color":"green"},Tags:["debug9"]}
 $execute unless data storage bw:map maps[{"id":$(id)d}].visit run summon marker ~ ~ ~ {CustomName:{"text":"[参观点]","color":"red"},Tags:["debug9"]}
 
@@ -70,9 +70,9 @@ $tellraw @s ["     数据  >>   ", \
     {"selector":"@e[type=marker,tag=debug3]","click_event": {"action": "suggest_command","command": "/function debug:map_editor/operation/desc {'id':$(id),'desc':'<请将此处更改为介绍(json文本格式)>'}"},"hover_event": {"action": "show_text","value": "为当前编辑的地图设定地图简介"}},"  ", \
     {"selector":"@e[type=marker,tag=debug4]","click_event": {"action": "suggest_command","command": "/function debug:map_editor/operation/border_min {'id':$(id),'min':'<请将此处更改为想要的半径(纯数字)>'}"},"hover_event": {"action": "show_text","value": "为地图设定最小边界\n即边界收缩到的最小范围"}},"  ", \
     {"selector":"@e[type=marker,tag=debug5]","click_event": {"action": "suggest_command","command": "/function debug:map_editor/operation/border_max {'id':$(id),'max':'<请将此处更改为想要的半径(纯数字)>'}"},"hover_event": {"action": "show_text","value": "为地图设定最大边界\n这将成为边界未收缩时的默认半径\n同时会影响到地图恢复系统的选区"}},"  \n                 ", \
-    {"selector":"@e[type=marker,tag=debug6]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_resource {'id':$(id)}"},"hover_event": {"action": "show_text","value": "获取用于设定资源点的道具"}},"  ", \
+    {"selector":"@e[type=marker,tag=debug6]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_map_center"},"hover_event": {"action": "show_text","value": "获取用于中心点的道具"}},"  ", \
     {"selector":"@e[type=marker,tag=debug7]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_team {'id':$(id)}"},"hover_event": {"action": "show_text","value": "获取用于设定床的道具"}},"  ", \
-    {"selector":"@e[type=marker,tag=debug8]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_map_center"},"hover_event": {"action": "show_text","value": "获取用于中心点的道具"}},"  ", \
+    {"selector":"@e[type=marker,tag=debug8]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_resource {'id':$(id)}"},"hover_event": {"action": "show_text","value": "获取用于设定资源点的道具"}},"  ", \
     {"selector":"@e[type=marker,tag=debug9]","click_event": {"action": "run_command","command": "/function debug:map_editor/operation/visit with storage debug:map_editor/panel data.$(uuid)"},"hover_event": {"action": "show_text","value": "设定玩家参观地图时的初始位置"}},"  \n                 ", \
     {"selector":"@e[type=marker,tag=debug10]","click_event": {"action": "run_command","command": "/function debug:map_editor/panel/buttom/data_special_map {'id':$(id)}"},"hover_event": {"action": "show_text","value": "决定这个地图是否归属于特殊地图, 这会让当前正在编辑的地图设定为负数id, 并且不会被随机地图选取到"}},"  ", \
     {"selector":"@e[type=marker,tag=debug11]","hover_event": {"action": "show_text","value": "决定这个地图的是否会自我恢复\n如果关闭, 玩家可能会传入虚空中\n暂时不支持停用自我复制功能"}}]
