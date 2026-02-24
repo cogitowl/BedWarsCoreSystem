@@ -4,6 +4,7 @@ schedule function bw:global/clock/20tick 20t replace
 # 状态执行
 execute if score $working gaming matches 0 run function bw:lobby/tick20
 execute if score $working gaming matches 1 run function bw:game/tick/20tick
+execute if score $working gaming matches 2 run function bw:game_end/tick20
 
 # 暴力的挂机检测
 #! 需要重置
@@ -21,6 +22,9 @@ execute as @e[type=arrow,tag=!projectile_checked] run function bw:global/event/a
 
 # music controller
 function bw:global/music/tick20
+
+# 提示系统
+function bw:global/tip/tick20
 
 # 笨蛋检查器
 execute unless entity @e[type=marker,tag=entity_loss] run save-off

@@ -11,4 +11,4 @@ title @a[tag=playing,scores={round_coin=0..}] title {"text":"- COIN -",color:gol
 execute as @a[tag=playing,scores={round_coin=0..}] run title @s subtitle ["本局 ",{"score":{name:"@s",objective:"round_coin"}}," --> ",{"score":{name:"@s",objective:"coin"}}," 生涯"]
 
 # loop
-execute as @a[scores={round_coin=10..}] run schedule function bw:game/system_end/round_to_career/scene_coin 2t replace 
+execute as @a[scores={round_coin=10..}] run schedule function bw:game_end/round_to_career/scene_coin 2t replace 

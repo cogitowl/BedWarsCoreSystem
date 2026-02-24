@@ -19,10 +19,10 @@ schedule clear bw:lobby/vote/start
 
 schedule clear bw:game/bossbar_player
 schedule clear bw:game/mutation/trigger/game_start
-schedule clear bw:game/system_end/round_to_career/scene_exp
-schedule clear bw:game/system_end/round_to_career/scene_coin
-schedule clear bw:game/system_end/round_to_career/scene_stat
-schedule clear bw:game/system_init/game_start_countdown
+schedule clear bw:game_end/round_to_career/scene_exp
+schedule clear bw:game_end/round_to_career/scene_coin
+schedule clear bw:game_end/round_to_career/scene_stat
+schedule clear bw:game_start/system_init/game_start_countdown
 
 schedule clear bw:global/clock/1tick
 schedule clear bw:global/clock/2tick

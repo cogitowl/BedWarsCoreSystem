@@ -196,3 +196,6 @@ bossbar set countdown:blue color blue
 bossbar remove countdown:spec
 bossbar add countdown:spec "倒计时"
 bossbar set countdown:spec color white
+
+# 初始化模块
+function bw:game_end/round_to_career/init

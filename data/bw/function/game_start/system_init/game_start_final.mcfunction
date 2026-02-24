@@ -2,8 +2,8 @@
 
 # 检测环境 
 scoreboard players set $env_check temp 1
-execute unless score $disable_environment_check maintenance matches 1 store result score $env_check temp run function bw:game/system_init/env_check
-execute if score $env_check temp matches 2.. run function bw:game/system_init/env_check_fail
+execute unless score $disable_environment_check maintenance matches 1 store result score $env_check temp run function bw:game_start/system_init/env_check
+execute if score $env_check temp matches 2.. run function bw:game_start/system_init/env_check_fail
 execute if score $env_check temp matches 2.. run return 1
 execute if score $env_check temp matches 1.. run scoreboard players reset $env_check temp
 

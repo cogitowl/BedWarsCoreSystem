@@ -7,5 +7,5 @@ tellraw @a[tag=playing] ["",{"text": "[⏻] ","color": "aqua","bold": true}, {"t
 scoreboard players remove $start_countdown temp 1
 
 # loop
-execute if score $start_countdown temp matches 1.. run schedule function bw:game/system_init/game_start_countdown 1s replace
-execute if score $start_countdown temp matches ..0 run function bw:game/system_init/game_start_countdown_end
+execute if score $start_countdown temp matches 1.. run schedule function bw:game_start/system_init/game_start_countdown 1s replace
+execute if score $start_countdown temp matches ..0 run function bw:game_start/system_init/game_start_countdown_end

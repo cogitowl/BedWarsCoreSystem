@@ -122,6 +122,3 @@ setblock 2 50 -32 minecraft:redstone_block
 # 自我矫正
 ## 资源点缺少 res_cd：更新 cd 为 1
 execute as @e[type=armor_stand,tag=res] unless score @s res_cd = @s res_cd run scoreboard players set @s res_cd 1
-
-# 结算
-function bw:game/system_end/round_to_career/tick20

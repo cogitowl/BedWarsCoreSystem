@@ -26,6 +26,6 @@ title @a[tag=playing,scores={game_end_title_b=0..}] title {"text":"- 🗡 💀 �
 execute as @a[tag=playing,scores={game_end_title_b=0..}] run title @s subtitle ["本局 ",{"score":{name:"@s",objective:"round_kill"}},"/",{"score":{name:"@s",objective:"round_death"}},"/",{"score":{name:"@s",objective:"round_bed_break"}}," --> ",{"score":{name:"@s",objective:"stat_kill"}},"/",{"score":{name:"@s",objective:"stat_death"}},"/",{"score":{name:"@s",objective:"stat_bed_break"}}," 生涯"]
 
 # loop
-execute as @a[scores={round_death=1..}] run schedule function bw:game/system_end/round_to_career/scene_stat 10t replace 
-execute as @a[scores={round_kill=1..}] run schedule function bw:game/system_end/round_to_career/scene_stat 10t replace 
-execute as @a[scores={round_bed_break=1..}] run schedule function bw:game/system_end/round_to_career/scene_stat 10t replace 
+execute as @a[scores={round_death=1..}] run schedule function bw:game_end/round_to_career/scene_stat 10t replace 
+execute as @a[scores={round_kill=1..}] run schedule function bw:game_end/round_to_career/scene_stat 10t replace 
+execute as @a[scores={round_bed_break=1..}] run schedule function bw:game_end/round_to_career/scene_stat 10t replace 
