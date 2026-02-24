@@ -60,8 +60,6 @@ scoreboard players set $32768 const 32768
 scoreboard players set $100000 const 100000
 
 
-
-
 #scoreboard objectives remove command_config
 scoreboard objectives add command_config dummy "指令配置"
 
@@ -73,10 +71,6 @@ scoreboard objectives add music_time dummy "音乐 间隔时间"
 
 scoreboard objectives remove music_id
 scoreboard objectives add music_id dummy "音乐 ID"
-
-#scoreboard objectives remove tip
-scoreboard objectives add tip dummy "提示"
-
 
 scoreboard objectives remove temp
 scoreboard objectives remove temp2
@@ -162,6 +156,9 @@ scoreboard objectives add about trigger "关于这个数据包"
 
 # 初始化 真实时间获取
 function bw:global/clock/real_time/init
+
+# 初始化全局模块
+function bw:global/tip/init
 
 # 开始 tps 运算
 schedule function bw:global/clock/tps_check/start 10s
