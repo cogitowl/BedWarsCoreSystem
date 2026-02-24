@@ -6,3 +6,6 @@ execute unless score $ energy_clock = $ energy_clock run scoreboard players set 
 execute if score $ energy_clock matches 2147483600.. run say energy_clock 即将达到 2147483648
 scoreboard players add $ energy_clock 1
 execute as @a[team=!debug] at @s run function bw:global/event/energy_regain
+
+# 状态执行
+execute if score $working gaming matches 2 run function bw:proxy-lobby/clock/20tick
