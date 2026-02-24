@@ -6,5 +6,8 @@
         "scminput": false,
         "yaml": true,
         "mcfunction": true
+    },
+    "yaml.schemas": {
+        "https://www.schemastore.org/yamllint.json": "untitled:Untitled-1"
     }
 }

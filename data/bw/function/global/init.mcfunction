@@ -160,6 +160,9 @@ function bw:global/clock/real_time/init
 # 初始化全局模块
 function bw:global/tip/init
 
+# 初始化 游戏启动 模式
+function bw:game_start/init
+
 # 开始 tps 运算
 schedule function bw:global/clock/tps_check/start 10s
 

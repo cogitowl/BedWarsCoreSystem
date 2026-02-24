@@ -6,10 +6,11 @@ function bw:global/map/body/reset
 
 # message
 # $title @a[tag=debug] actionbar ["[系统临时调试信息] 地图恢复系统正在恢复地图 $(id)"]
-# $tellraw @a[tag=debug] ["[系统临时调试信息] 地图恢复系统正在恢复地图 $(id)"]
+$tellraw @a[tag=debug] ["[系统临时调试信息] 地图恢复系统正在恢复地图 $(id)"]
 
 # 宣称复制模式
 $scoreboard players set #sys_working map $(id) 
+$data modify storage bw:map maps[{"id":$(id)d}].lock.copying set value true
 
 # 数据拷贝
 $data modify storage bw:map clone.last_map set value $(id)

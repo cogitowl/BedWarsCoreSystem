@@ -16,7 +16,7 @@ function bw:lobby/map/load_data with storage bw:basic temp
 execute if data storage bw:map using.map_editor.lock run return run function bw:lobby/map/change/request/try_again
 
 ## 当前地图正在复制中
-execute if data storage bw:map using.lock.copying run return run function bw:lobby/map/change/request/try_again
+#execute if data storage bw:map using.lock.copying run return run function bw:lobby/map/change/request/try_again
 
 # 更新地图名称
 kill @e[tag=map_name]
