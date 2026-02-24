@@ -49,6 +49,9 @@ function bw:global/music/stop_all
 execute if score $notification maintenance matches 1 run tag @s add scheduler
 execute if score $notification maintenance matches 1 run schedule function bw:global/event/debug_notice/scheduler 2s replace
 
+# 设定提示
+function bw:global/tip/init_player
+
 # 进入各个状态
 execute if score $working gaming matches 0 run function bw:lobby/player_enter
 execute if score $working gaming matches 1 run function bw:game/player_event/enter

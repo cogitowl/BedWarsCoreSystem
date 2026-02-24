@@ -9,4 +9,3 @@ data modify storage bw:basic temp.Pos.y set from storage bw:map using.team.red.b
 data modify storage bw:basic temp.Pos.z set from storage bw:map using.team.red.bed.pos[2]
 
 execute at @s run function bw:game/map/init/teleport with storage bw:basic temp.Pos
-say 1
