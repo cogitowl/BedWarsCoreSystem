@@ -37,5 +37,8 @@ scoreboard players add @s round_exp 5
 
 # execute if score @s kill_same matches 24.. run function bw:game/player_event/kick
 
+# 重置经验显示
+function bw:global/event/exp_regain
+
 # （地图接口）玩家击杀
 setblock -4 50 -32 minecraft:redstone_block
