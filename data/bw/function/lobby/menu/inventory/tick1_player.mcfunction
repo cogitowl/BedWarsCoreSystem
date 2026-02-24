@@ -27,29 +27,6 @@ execute if score $void_damage gamerule matches 0 run item replace entity @s inve
 execute if score $void_damage gamerule matches 1 run item replace entity @s inventory.4 with redstone_block[custom_name="虚空伤害：增加伤害",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"void_damage"}] 1
 execute if score $void_damage gamerule matches 2 run item replace entity @s inventory.4 with nether_wart_block[custom_name="虚空伤害：立即击杀",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键切换"]],custom_data={disabled_throw:true,lobby_item:true,type:gamerule,event:"void_damage"}] 1
 
-item replace entity @s inventory.5 with air 1
-item replace entity @s inventory.6 with air 1
-item replace entity @s inventory.7 with air 1
-item replace entity @s inventory.8 with air 1
-item replace entity @s inventory.9 with air 1
-item replace entity @s inventory.10 with air 1
-item replace entity @s inventory.11 with air 1
-item replace entity @s inventory.12 with air 1
-item replace entity @s inventory.13 with air 1
-item replace entity @s inventory.14 with air 1
-item replace entity @s inventory.15 with air 1
-item replace entity @s inventory.16 with air 1
-item replace entity @s inventory.17 with air 1
-item replace entity @s inventory.18 with air 1
-item replace entity @s inventory.19 with air 1
-item replace entity @s inventory.20 with air 1
-item replace entity @s inventory.21 with air 1
-item replace entity @s inventory.22 with air 1
-item replace entity @s inventory.23 with air 1
-item replace entity @s inventory.24 with air 1
-item replace entity @s inventory.25 with air 1
-item replace entity @s inventory.26 with air 1
-
 ## 切换地图
 item replace entity @s hotbar.3 with player_head[custom_name="上一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:prev},minecraft:profile=MHF_ArrowLeft] 1
 item replace entity @s hotbar.5 with player_head[custom_name="下一张地图",lore=[[{"text":"按下 "},{"keybind":"key.swapOffhand"}," 键开始切换！"]],custom_data={disabled_throw:true,lobby_item:true,type:map,event:next},minecraft:profile=MHF_ArrowRight] 1
@@ -65,18 +42,3 @@ execute if entity @s[tag=!out_of_energy] unless data storage bw:map using.lock.s
 
 
 execute unless score @s vote matches 1..2 if score $voting vote matches 1..2 run item replace entity @s hotbar.4 with air 1
-
-item replace entity @s hotbar.0 with air 1
-item replace entity @s hotbar.1 with air 1
-item replace entity @s hotbar.2 with air 1
-item replace entity @s hotbar.6 with air 1
-item replace entity @s hotbar.7 with air 1
-item replace entity @s hotbar.8 with air 1
-
-
-
-item replace entity @s armor.body with air 1
-item replace entity @s armor.chest with air 1
-item replace entity @s armor.feet with air 1
-item replace entity @s armor.head with air 1
-item replace entity @s armor.legs with air 1
