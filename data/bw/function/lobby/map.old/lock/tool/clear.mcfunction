@@ -1,1 +1,0 @@
-clear @a[team=lobby] snowball[custom_data={disable_throw:true,map_unlock:true},custom_name={"text":"试图解锁"}]
