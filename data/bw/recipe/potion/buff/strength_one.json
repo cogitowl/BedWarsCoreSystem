@@ -3,8 +3,8 @@
   "category": "misc",
   "group": "strength",
   "key": {
-    "#": "minecraft:iron_ingot",
-    "Y": "minecraft:iron_sword"
+    "#": "minecraft:diamond_block",
+    "Y": "minecraft:diamond_sword"
   },
   "pattern": [
     "#Y#",
