@@ -1,5 +1,6 @@
 # 游戏结束文件
 
+
 # （地图接口）游戏结束
 setblock 4 50 -32 minecraft:redstone_block
 

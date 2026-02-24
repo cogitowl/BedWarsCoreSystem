@@ -1,6 +1,5 @@
 scoreboard players set $wait_time game_end_title_a 4
 
-say scene_exp called
 # 增加 生涯经验点（使用原版方法）
 execute as @a if score @s round_exp matches 1.. run experience add @s 1 points
 

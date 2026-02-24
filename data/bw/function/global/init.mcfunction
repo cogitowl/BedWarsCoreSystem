@@ -42,6 +42,7 @@ scoreboard players set $4 const 4
 scoreboard players set $5 const 5
 scoreboard players set $10 const 10
 scoreboard players set $20 const 20
+scoreboard players set $60 const 60
 scoreboard players set $100 const 100
 scoreboard players set $101 const 101
 scoreboard players set $102 const 102
@@ -57,6 +58,7 @@ scoreboard players set $303 const 303
 scoreboard players set $559 const 559
 scoreboard players set $1000 const 1000
 scoreboard players set $32768 const 32768
+scoreboard players set $10000 const 10000
 scoreboard players set $100000 const 100000
 
 
@@ -162,6 +164,9 @@ function bw:global/tip/init
 
 # 初始化 游戏启动 模式
 function bw:game_start/init
+
+# 初始化 游戏结束 模式
+function bw:game_end/init
 
 # 开始 tps 运算
 schedule function bw:global/clock/tps_check/start 10s
