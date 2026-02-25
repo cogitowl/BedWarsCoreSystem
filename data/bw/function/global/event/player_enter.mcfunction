@@ -49,6 +49,9 @@ function bw:global/music/stop_all
 execute if score $notification maintenance matches 1 run tag @s add scheduler
 execute if score $notification maintenance matches 1 run schedule function bw:global/event/debug_notice/scheduler 2s replace
 
+# 初始化 本局信息配置
+execute unless score @s round_info_config = @s round_info_config run scoreboard players set @s round_info_config 1111111
+
 # 设定提示
 function bw:global/tip/init_player
 
