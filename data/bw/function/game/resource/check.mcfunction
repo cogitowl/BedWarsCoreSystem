@@ -1,7 +1,7 @@
 # 检测资源点是否出现积累物品太多的情况
 
 # 检测周围资源
-execute store result score $res_number temp run data get entity @e[type=item,distance=..3,limit=1,sort=nearest] Item.Count
+execute store result score $res_number temp run data get entity @e[type=item,distance=..3,limit=1,sort=nearest] Item.count
 
 # 抽取符合自己条件的数值用于对比
 execute as @s[tag=res_diamond] run scoreboard players operation $res_max temp = $res_diamond_max gamerule

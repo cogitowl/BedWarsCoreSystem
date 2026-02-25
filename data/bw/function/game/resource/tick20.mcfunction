@@ -2,7 +2,7 @@
 
 # 检查已满
 function bw:game/resource/check
-execute if entity @s[tag=res_max] run data modify entity @s CustomName set value {"storage":"bw:lang","nbt":"game.resource.max","interpret": true}
+execute if entity @s[tag=res_max] run data modify entity @s CustomName set value {"text":"资源点已满！","color":"yellow",bold:true}
 
 # 倒计时
 scoreboard players remove @s[scores={res_cd=1..},tag=!res_max] res_cd 1
