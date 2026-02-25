@@ -1,0 +1,11 @@
+execute if entity @s[tag=tip_alchemy] run return run function bw:global/tip/3_delay/alchemy
+execute if entity @s[tag=tip_break_bed_under_ground] run return run function bw:global/tip/3_delay/break_bed_under_ground
+execute if entity @s[tag=tip_craft_way] run return run function bw:global/tip/3_delay/craft_way
+execute if entity @s[tag=tip_don_touch_that] run return run function bw:global/tip/3_delay/don_touch_that
+execute if entity @s[tag=tip_emergency_platform] run return run function bw:global/tip/3_delay/emergency_platform
+execute if entity @s[tag=tip_error_not_found] run return run function bw:global/tip/3_delay/error_not_found
+execute if entity @s[tag=tip_food_is_important] run return run function bw:global/tip/3_delay/food_is_important
+execute if entity @s[tag=tip_miss_lava] run return run function bw:global/tip/3_delay/miss_lava
+execute if entity @s[tag=tip_miss_res] run return run function bw:global/tip/3_delay/miss_res
+execute if entity @s[tag=tip_poor_focus] run return run function bw:global/tip/3_delay/poor_focus
+execute if entity @s[tag=tip_strategy_is_important] run return run function bw:global/tip/3_delay/strategy_is_important

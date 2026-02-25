@@ -68,6 +68,10 @@ scoreboard players add @s music_time 2
 # 重置经验显示
 function bw:global/event/exp_regain
 
+# tip
+execute if entity @s[scores={tip_strategy_is_important=..0}] run tag @s add tip_strategy_is_important
+execute if entity @s[scores={round_death=5..,tip_poor_focus=..0}] run tag @s add tip_poor_focus
+
 # 收尾
 tag @a remove killer
 tag @s remove death

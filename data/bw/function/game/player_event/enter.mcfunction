@@ -103,6 +103,10 @@ function bw:game/map/enter
 effect clear
 effect give @s regeneration 3 255 true
 
+# tip 
+execute if entity @s[scores={tip_craft_way=..0}] if score $exchange gamerule matches 1 run tag @s add tip_craft_way
+function bw:game/map/sub/enter
+
 # 修饰器
 execute if score $max_health gamerule matches 1 run attribute @s max_health modifier add maxhealth_one 10 add_value
 execute if score $max_health gamerule matches 2 run attribute @s max_health modifier add maxhealth_two 20 add_value

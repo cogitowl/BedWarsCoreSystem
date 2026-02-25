@@ -8,4 +8,4 @@ execute if score $timer game_end_mode matches 0 run function bw:game_end/game_en
 execute if score $timer game_end_mode matches 1..10 run tellraw @a[tag=playing] [{"text":"地图将在 ","color":"aqua"},{"score":{"name":"$timer","objective":"game_end_mode"},"color":"white"},{"text":" 秒后开始清理！","color":"aqua"}]
 
 # 笨蛋保护器
-execute as @a[team=lobby,gamemode=adventure] at @s if entity @s[y=-3,dy=-255] if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air if block ~ ~-6 ~ air if block ~ ~-7 ~ air run effect give @s levitation 5 1 true
+execute as @a[tag=playing,gamemode=adventure] at @s if entity @s[y=-3,dy=-255] if block ~ ~-1 ~ air if block ~ ~-2 ~ air if block ~ ~-3 ~ air if block ~ ~-4 ~ air if block ~ ~-5 ~ air if block ~ ~-6 ~ air if block ~ ~-7 ~ air run effect give @s levitation 5 1 true

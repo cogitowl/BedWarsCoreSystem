@@ -8,3 +8,7 @@ scoreboard players reset @s craft_wool
 # 击退棒
 execute if score @s craft_stick matches 1.. run function bw:game/craft/event/stick
 scoreboard players reset @s craft_stick
+
+# 合成铁桶 TIP
+execute if score @s craft_bukkit matches 1.. run function bw:game/craft/event/bukkit
+scoreboard players reset @s craft_bukkit

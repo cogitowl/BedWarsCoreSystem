@@ -19,4 +19,7 @@ function bw:game/default_kit
 function bw:game/map/enter
 
 # 给予周边玩家提示
-execute at @s as @a[distance=0.1..20] run tag @s add tip_birth_invincible
+execute if entity @s[team=red] at @s as @a[distance=0.1..20,team=!red,tag=playing,scores={tip_birth_invincible=..0}] run tag @s add tip_birth_invincible
+execute if entity @s[team=green] at @s as @a[distance=0.1..20,team=!green,tag=playing,scores={tip_birth_invincible=..0}] run tag @s add tip_birth_invincible
+execute if entity @s[team=blue] at @s as @a[distance=0.1..20,team=!blue,tag=playing,scores={tip_birth_invincible=..0}] run tag @s add tip_birth_invincible
+execute if entity @s[team=yellow] at @s as @a[distance=0.1..20,team=!yellow,tag=playing,scores={tip_birth_invincible=..0}] run tag @s add tip_birth_invincible

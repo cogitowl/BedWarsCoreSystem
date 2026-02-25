@@ -1,4 +1,6 @@
 tellraw @s[scores={tip_cycle=1}] ["\n",{"text":" ✉  ","color":green},{"text":"绿色玩家，我们喜欢","color":green,"bold":true},{"text":"\n     能够让自己变成长猿臂之类的模组妥妥是作弊行为！\n     小地图之类带来一方不平衡的最好也不要用...\n"}]
 tellraw @s[scores={tip_cycle=2}] ["\n",{"text":" ✉  ","color":aqua},{"text":"及时反馈漏洞","color":aqua,"bold":true},{"text":"\n     数据包目前处于测试阶段，可能存在一些未发现的错误...\n     如果遇到任何问题，请在交流群里直接反馈！\n"}]
 tellraw @s[scores={tip_cycle=3}] ["\n",{"text":" ✉  ","color":"light_purple"},{"text":"地图破坏","color":light_purple,"bold":true},{"text":"\n     对于地图，它们在汐之恒起床战争中可能不止有观赏性...\n     或许还能挖呢...?\n"}]
-tellraw @s[scores={tip_cycle=4}] ["\n",{"text":" ✉  ","color":light_purple},{"text":"SM玩法","color":light_purple,"bold":true},{"text":"\n     你可以选中特殊地图，它们有着独特的玩法...\n     有些甚至打破了起床战争的基本玩法！\n"}]
+tellraw @s[scores={tip_cycle=4}] ["\n",{"text":" ✉  ","color":light_purple},{"text":"SM 玩法","color":light_purple,"bold":true},{"text":"\n     你可以选中特殊地图，它们有着独特的玩法...\n     有些甚至打破了起床战争的基本玩法！\n"}]
+tellraw @s[scores={tip_cycle=5}] ["\n",{"text":" ✉  ","color":light_purple},{"text":"不止起床","color":light_purple,"bold":true},{"text":"\n     如果玩腻了经典起床战争，也可以尝试其他玩法...\n     尝试更改游戏规则、游戏模式都会带来新奇体验！\n"}]
+tellraw @s[scores={tip_cycle=6}] ["\n",{"text":" ✉  ","color":light_purple},{"text":"守家是第一步","color":light_purple,"bold":true},{"text":"\n     你可以通过多种方式获得守家材料\n     来防止敌人破坏你的床...！\n"}]

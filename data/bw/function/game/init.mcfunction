@@ -78,6 +78,9 @@ scoreboard objectives add craft_wool crafted:white_wool "羊毛合成触发"
 scoreboard objectives remove craft_stick
 scoreboard objectives add craft_stick crafted:debug_stick "击退棒合成触发"
 
+scoreboard objectives remove craft_bukkit
+scoreboard objectives add craft_bukkit crafted:water_bucket "水桶合成触发"
+
 scoreboard objectives remove kill_same_check
 scoreboard objectives add kill_same_check dummy "击杀同一玩家检测"
 

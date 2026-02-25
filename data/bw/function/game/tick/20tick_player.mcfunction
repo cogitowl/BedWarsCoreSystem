@@ -10,5 +10,8 @@ execute as @s[gamemode=spectator,tag=playing,x=-200,y=-200,z=-200,dx=400,dy=80,d
 # 检测购买项目
 function bw:game/craft/check
 
+# tip
+execute if score @s tip_food_is_important matches ..0 if score @s food matches ..8 run tag @s add tip_food_is_important
+
 # 刷新本局信息
 function bw:game/system_event/update_scoreboard
